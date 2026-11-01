@@ -1,4 +1,4 @@
-# Jashn (جشن / जश्न) — Celebration & Event Planner
+# Jashn — Celebration & Event Planner
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBlueC8lyst%2Fjashn)
 [![Tests Passing](https://img.shields.io/badge/tests-160%2F160%20passing-brightgreen)](https://github.com/BlueC8lyst/jashn)
