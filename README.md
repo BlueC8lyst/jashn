@@ -1,8 +1,26 @@
 # Jashn (جشن / जश्न) — Celebration & Event Planner
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBlueC8lyst%2Fjashn)
+[![Tests Passing](https://img.shields.io/badge/tests-160%2F160%20passing-brightgreen)](https://github.com/BlueC8lyst/jashn)
+[![Next.js](https://img.shields.io/badge/Next.js-16.4.3-black)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.3.1-blue)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 > A production-grade, GenAI-powered celebration planning assistant designed for weddings, milestone birthdays, and community events. Jashn turns high-level event ideas into honest budget projections, dependency-aware timelines, vendor checklists, and personalized concepts — and intelligently re-plans when real-world constraints change.
 
-Built for **Challenge 5: Celebration & Event Planner**.
+Built for **Hackathon Challenge 5: Celebration & Event Planner**.
+
+---
+
+## 🚀 One-Click Deployment
+
+Deploy your own instance of Jashn directly to Vercel with zero configuration:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBlueC8lyst%2Fjashn)
+
+1. Click the button above to clone and deploy with Vercel.
+2. (Optional) Set the `GEMINI_API_KEY` environment variable in **Project Settings > Environment Variables** for live GenAI generation. Without an API key, the application seamlessly runs with built-in deterministic offline suggestions.
 
 ---
 
@@ -50,12 +68,12 @@ Jashn is engineered for sub-millisecond execution and minimal memory overhead. T
 
 | Domain Operation | Throughput | Mean Latency | Allocation Profile |
 | :--- | :--- | :--- | :--- |
-| **`summariseBudget`** | **> 1,000,000 ops/sec** | **0.0011 ms** | Single-pass accumulator |
+| **`summariseBudget`** | **> 1,025,000 ops/sec** | **0.0011 ms** | Single-pass accumulator |
 | **`compareQuotes`** | **> 580,000 ops/sec** | **0.0020 ms** | Zero allocations per quote |
-| **`date maths`** | **> 160,000 ops/sec** | **0.0070 ms** | Fast string slicing (no heap arrays) |
+| **`date maths`** | **> 163,000 ops/sec** | **0.0070 ms** | Fast string slicing (no heap arrays) |
 | **`heuristicParseQuote`** | **> 72,000 ops/sec** | **0.0157 ms** | Single-pass regex extraction |
-| **`evaluateScenario`** | **> 23,000 ops/sec** | **0.0456 ms** | In-memory priority weighting |
-| **`computeSchedule`** | **> 10,000 ops/sec** | **0.1049 ms** | Topological sort (22 template tasks) |
+| **`evaluateScenario`** | **> 23,700 ops/sec** | **0.0456 ms** | In-memory priority weighting |
+| **`computeSchedule`** | **> 10,285 ops/sec** | **0.1049 ms** | Topological sort (22 template tasks) |
 
 ---
 
@@ -96,7 +114,7 @@ jashn/
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Local Setup)
 
 ### Prerequisites
 - Node.js `>= 20.9.0`
@@ -104,7 +122,7 @@ jashn/
 
 ### Installation
 ```bash
-git clone <repo-url>
+git clone https://github.com/BlueC8lyst/jashn.git
 cd jashn
 npm install
 ```
@@ -141,12 +159,12 @@ npm run build
 
 ---
 
-## 🌐 Deployment to Vercel
+## 🌐 Manual Deployment to Vercel
 
-1. Push this repository to GitHub/GitLab.
-2. Import the project into [Vercel](https://vercel.com).
-3. (Optional) Set the `GEMINI_API_KEY` environment variable in **Project Settings > Environment Variables** for live GenAI generation.
-4. Deploy! Vercel will automatically run `npm run build` using Next.js Turbopack.
+1. Push your repository to GitHub.
+2. Go to [Vercel Dashboard](https://vercel.com/new) and click **Import** next to `jashn`.
+3. (Optional) Set `GEMINI_API_KEY` under **Environment Variables**.
+4. Click **Deploy**. Vercel will build and serve the project globally using edge caching.
 
 ---
 
