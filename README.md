@@ -13,17 +13,6 @@ Built for **Hackathon Challenge 5: Celebration & Event Planner**.
 
 ---
 
-## 🚀 One-Click Deployment
-
-Deploy your own instance of Jashn directly to Vercel with zero configuration:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBlueC8lyst%2Fjashn)
-
-1. Click the button above to clone and deploy with Vercel.
-2. (Optional) Set the `GEMINI_API_KEY` environment variable in **Project Settings > Environment Variables** for live GenAI generation. Without an API key, the application seamlessly runs with built-in deterministic offline suggestions.
-
----
-
 ## 🌟 Key Features
 
 ### 1. "Ask Before Planning" Wizard
